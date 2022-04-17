@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import * as ReactDOMClient from 'react-dom/client';
 
-ReactDOM.render(
+const rootNode = document.getElementById('root');
+
+// ReactDOM.render(
+  ReactDOMClient.createRoot(rootNode).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  // document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
