@@ -1,0 +1,54 @@
+$mainColor : #ff0000;
+
+.red {
+  color : $mainColor;
+}
+
+div.container {
+  h4 {
+    color : blue;
+  }
+  p {
+    color : green;
+  }
+}
+
+// .my-alert {
+//   background : #eeeeee;
+//   padding : 15px;
+//   border-radius : 5px;
+//   max-width : 500px;
+//   width : 100%;
+//   margin : auto;
+// }
+// .my-alert2 {
+//   @extend .my-alert;
+//   background : yellow;
+// }
+@mixin alert1() {
+  background : #eeeeee;
+  padding : 15px;
+  border-radius : 5px;
+  max-width : 500px;
+  width : 100%;
+  margin : auto;
+}
+.my-alert {
+  @include alert1()
+}
+.my-alert2 {
+  @extend .my-alert;
+  background : yellow;
+}
+.my-alert p {
+  margin-bottom : 0;
+}
+
+// tab
+.wow-enter {
+  opacity : 0
+}
+.wow-enter-active {
+  opacity : 1;
+  transition : all 500ms;
+}
